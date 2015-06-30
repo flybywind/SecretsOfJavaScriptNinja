@@ -3,5 +3,6 @@
 
 ### 6 Object-orientation with prototypes
 
-1. [Instantiation and prototypes](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Object-orientation%20with%20prototypes/6.1.md)
-2. [The gotchas!](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Object-orientation%20with%20prototypes/6.2.md)
+1. [初始化和原型 Instantiation and prototypes](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Object-orientation%20with%20prototypes/6.1.md)
+2. [陷阱们 The gotchas!](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Object-orientation%20with%20prototypes/6.2.md)
+

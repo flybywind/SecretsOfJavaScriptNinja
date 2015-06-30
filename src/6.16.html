@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Simulating Array functionality but without the true subclassing</title>
+    <link rel="stylesheet" href="qunit/qunit-1.18.0.css">
+</head>
+
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="qunit/qunit-1.18.0.js"></script>
+    <script type="text/javascript">
+        QUnit.test(
+            "Simulating Array functionality but without the true subclassing",
+            function(assert) {
+
+                function MyArray0() {}
+                MyArray0.prototype = new Array();
+                var mine = new MyArray0();
+                mine.push(1, 2, 3);
+                assert.deepEqual(mine.length, 3,
+                    "All the items are in our sub-classed array.");
+                assert.deepEqual(mine[0], 1,
+                    "first element is 1");
+                assert.deepEqual(mine[1], 2,
+                    "first element is 2");
+                assert.deepEqual(mine[2], 3,
+                    "first element is 3");
+                assert.ok(mine instanceof Array,
+                    "Verify that we implement Array functionality.");
+
+				function MyArray() {}
+				// Defines a new class with a prototyped length property￼￼￼
+
+				(function() {
+					var methods = ['push', 'pop', 'shift', 'unshift',
+						'slice', 'splice', 'join'
+					];
+					// Copies selected array functionality￼
+					for (var i = 0; i < methods.length; i++)(function(name) {
+						MyArray.prototype[name] = function() {
+							return Array.prototype[name].apply(this, arguments);
+						};
+					})(methods[i]);
+				})();
+				var mine = new MyArray();
+				mine.push(1, 2, 3);
+				assert.deepEqual(mine.length, 3,
+					"All the items are on our sub-classed array.");
+                assert.deepEqual(mine[0], 1,
+                    "first element is 1");
+                assert.deepEqual(mine[1], 2,
+                    "first element is 2");
+                assert.deepEqual(mine[2], 3,
+                    "first element is 3");
+				assert.ok(!(mine instanceof Array),
+					"We aren't subclassing Array, though.");
+
+            });
+    </script>
+</body>
+
+</html>

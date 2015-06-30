@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Achieving inheritance with prototypes</title>
+    <link rel="stylesheet" href="qunit/qunit-1.18.0.css">
+</head>
+
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="qunit/qunit-1.18.0.js"></script>
+    <script type="text/javascript">
+        QUnit.test("Achieving inheritance with prototypes", function(assert){
+			function Person() {}
+			Person.prototype.dance = function() {};
+
+			function Ninja(){}
+			Ninja.prototype = new Person();
+			var ninja = new Ninja();
+			assert.ok(ninja instanceof Ninja,
+				"ninja receives functionality from the Ninja prototype");
+
+			assert.ok(ninja instanceof Person, "... and the Person prototype");
+			assert.ok(ninja instanceof Object, "... and the Object prototype");
+			assert.ok(typeof ninja.dance == "function", "... and can dance!");
+
+			Person.prototype.name = function() { return true };
+			assert.ok(ninja.name(), "... and live update by superclass");
+		});
+    </script>
+</body>
+
+</html>
