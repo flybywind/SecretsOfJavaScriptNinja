@@ -3,4 +3,5 @@
 
 ### 6 Object-orientation with prototypes
 
-1. [以Prototype为基石的对象体系](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Object-orientation+with+prototypes/6.1.md)
+1. [Instantiation and prototypes](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Object-orientation%20with%20prototypes/6.1.md)
+2. [The gotchas!](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Object-orientation%20with%20prototypes/6.2.md)
