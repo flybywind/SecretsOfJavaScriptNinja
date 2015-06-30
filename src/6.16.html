@@ -45,6 +45,7 @@
 						};
 					})(methods[i]);
 				})();
+				MyArray.prototype.length = 0;
 				var mine = new MyArray();
 				mine.push(1, 2, 3);
 				assert.deepEqual(mine.length, 3,
