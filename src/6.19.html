@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>纠正用户错误调用构造函数</title>
+    <link rel="stylesheet" href="qunit/qunit-1.18.0.css">
+</head>
+
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="qunit/qunit-1.18.0.js"></script>
+    <script type="text/javascript">
+        QUnit.test("纠正用户错误调用构造函数", function(assert) {
+            function User(first, last) {
+                if (! (this instanceof User) ){
+					return new User(first, last);
+				}
+                this.name = first + " " + last;
+            }
+			(function() {
+				this.name = "Rukia";
+				var user = User("Ichigo", "Kurosaki");
+				assert.ok(user, "Rukia exists")
+				assert.deepEqual(this.name, "Rukia",
+					"Name was set to Rukia.");
+			})();
+			var name = "Rukia";
+			var user = User("Ichigo", "Kurosaki");
+			assert.deepEqual(name, "Rukia",
+					"Name was set to Rukia.");
+        });
+    </script>
+</body>
+
+</html>
