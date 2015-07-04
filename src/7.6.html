@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>7.6 Using the exec() method to do both capturing and a global search</title>
+    <link rel="stylesheet" href="qunit/qunit-1.18.0.css">
+</head>
+
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <div class="samurai ninja"></div>
+    <script src="qunit/qunit-1.18.0.js"></script>
+    <script type="text/javascript">
+        QUnit.test("7.4 使用exec方法获取全局匹配的所有捕获", function(assert)
+        {
+
+            var html =
+                "<div class='test'><b>Hello</b> <i>world!</i></div>";
+            var pattern = /<(\/?)(\w+)([^>]*)>/g,
+                match;
+            var num = 0;
+
+            while ((match = pattern.exec(html)) !== null)
+            { //#1
+                assert.deepEqual(match.length, 4,
+                    "Every match finds each tag and 3 captures.");
+                num++;
+            }
+
+            assert.deepEqual(num, 6,
+                "3 opening and 3 closing tags found.");
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>7.5 local和global匹配的不同</title>
+    <link rel="stylesheet" href="qunit/qunit-1.18.0.css">
+</head>
+
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <div class="samurai ninja"></div>
+    <script src="qunit/qunit-1.18.0.js"></script>
+    <script type="text/javascript">
+        QUnit.test("7.5 local和global匹配的不同", function(assert)
+        {
+            var html =
+                "<div class='test'><b>Hello</b> <i>world!</i></div>";
+
+            var results = html.match(/<(\/?)(\w+)([^>]*)>/); //#1
+
+            assert.deepEqual(results[0], "<div class='test'>",
+                "The entire match.");
+            assert.deepEqual(results[1], "", "The (missing) slash.");
+            assert.deepEqual(results[2], "div", "The tag name.");
+            assert.deepEqual(results[3], " class='test'", "The attributes.");
+
+            var all = html.match(/<(\/?)(\w+)([^>]*?)>/g); //#2
+
+            assert.deepEqual(all[0], "<div class='test'>", "Opening div tag.");
+            assert.deepEqual(all[1], "<b>", "Opening b tag.");
+            assert.deepEqual(all[2], "</b>", "Closing b tag.");
+            assert.deepEqual(all[3], "<i>", "Opening i tag.");
+            assert.deepEqual(all[4], "</i>", "Closing i tag.");
+            assert.deepEqual(all[5], "</div>", "Closing div tag.");
+        });
+    </script>
+</body>
+
+</html>

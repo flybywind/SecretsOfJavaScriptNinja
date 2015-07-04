@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Listing 7.7 Using backreferences to match the contents of an HTML tag</title>
+    <link rel="stylesheet" href="qunit/qunit-1.18.0.css">
+</head>
+
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <div class="samurai ninja"></div>
+    <script src="qunit/qunit-1.18.0.js"></script>
+    <script type="text/javascript">
+        QUnit.test("7.7 使用反向引用匹配HTML tag内容",
+            function(assert)
+            {
+                var html =
+                    "<b class='hello'>Hello</b> <i>world!</i>";
+
+                var pattern = /<(\w+)([^>]*)>(.*?)<\/\1>/g; //#1
+                var pattern2 = /<(\w+)([^>]*)>(.*)<\/\1>/g; //#1
+                var match = pattern.exec(html);
+
+                assert.deepEqual(match[0], "<b class='hello'>Hello</b>",
+                    "The entire tag, start to finish.");
+                assert.deepEqual(
+                    match[1], "b", "The tag name.");
+                assert.deepEqual(match[2],
+                    " class='hello'", "The tag attributes.");
+                assert.deepEqual(
+                    match[3], "Hello", "The contents of the tag.");
+
+                match = pattern.exec(html);
+
+                assert.deepEqual(match[0], "<i>world!</i>",
+                    "The entire tag, start to finish.");
+                assert.deepEqual(
+                    match[1], "i", "The tag name.");
+                assert.deepEqual(match[2],
+                    "", "The tag attributes.");
+                assert.deepEqual(match[3],
+                    "world!", "The contents of the tag.");
+				
+				var s = new Date();
+				for (var i = 0; i < 500000; i++) {
+                	pattern.exec(html);
+                	pattern.exec(html);
+				}
+				var t = (new Date()).getTime() - s.getTime();
+				s = new Date();
+				for (var i = 0; i < 500000; i++) {
+                	pattern2.exec(html);
+                	pattern2.exec(html);
+				}
+				var t2 = (new Date()).getTime() - s.getTime();
+				assert.deepEqual(t, t2, "time compare");
+            });
+    </script>
+</body>
+
+</html>
