@@ -15,3 +15,4 @@
 2. [正则用法](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Wrangling%20regular%20expressions/7.2.md) 
 3. [编译正则表达式](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Wrangling%20regular%20expressions/7.3.md)
 4. [正则捕获](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Wrangling%20regular%20expressions/7.4.md)
+4. [函数替换](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Wrangling%20regular%20expressions/7.5.md)
