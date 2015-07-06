@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>7.15 匹配Unicode</title>
+    <link rel="stylesheet" href="qunit/qunit-1.18.0.css">
+</head>
+
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="qunit/qunit-1.18.0.js"></script>
+    <script type="text/javascript">
+        QUnit.test("7.15 匹配Unicode", function(assert)
+        {
+
+            var text = "JavaScript忍者秘术";
+            var matchAll =
+                /[\w\u0080-\uFFFF_-]+/; //#1 匹配所有unicode字符
+
+            assert.ok((text).match(matchAll),
+                "Our regexp matches unicode!");
+
+            var textUnicode = text.replace(/[\w\u0080-\uffff_-]/g,
+                function(c) {
+                    return "\\u" + c.charCodeAt(0).toString(16);
+                })
+            console.log("unicode of text: " + textUnicode)
+        })
+    </script>

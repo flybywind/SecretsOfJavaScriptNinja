@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>7.16 匹配转义字符</title>
+    <link rel="stylesheet" href="qunit/qunit-1.18.0.css">
+</head>
+
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="qunit/qunit-1.18.0.js"></script>
+    <script type="text/javascript">
+        QUnit.test("7.16 匹配转义", function(assert)
+        {
+            var pattern = /^((\w+)|(\\.))+$/; //#1
+
+            var tests = [ //#2 除了最后一个，其他应该全部通过
+                "formUpdate",
+                "form\\.update\\.whatever",
+                "form\\:update",
+                "\\f\\o\\r\\m\\u\\p\\d\\a\\t\\e",
+                "\\\\\\\\",
+                "form:update"
+            ];
+
+            for (var n = 0; n < tests.length; n++)
+            { //#3
+                assert.ok(pattern.test(tests[n]),
+                    tests[n] + " is a valid identifier");
+            }
+        })
+    </script>
