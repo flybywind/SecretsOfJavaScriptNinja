@@ -1,0 +1,37 @@
+<!doctype html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<p id="log"></p>
+<script type="text/javascript" >
+
+var delay = new Array(100);
+var freq = new Array(101);
+Date.now = Date.now ? Date.now : function() {
+	return (new Date()).getTime();
+};
+
+var i = 0;
+var s  = Date.now();
+var iid = setInterval(function() {
+	delay[i++] = Date.now() - s;
+	s = Date.now();
+	if (i >= 100) {
+		clearInterval(iid);
+		for (var j = 0; j < 101; j++) {
+			freq[j] = 0;
+		}
+		for (var j = 0; j < 100; j++) {
+			var ind = delay[j];
+			if (ind > 100) {
+				ind = 100;
+			}
+			++freq[ind];
+		}
+		var log = document.getElementById("log");
+		for (var j = 0; j < 101; j++) {
+			if (freq[j] > 0) log.innerHTML += (j + "ms&emsp;" +	freq[j] + "<br>");
+		}
+	}
+}, 1);
+
+</script>

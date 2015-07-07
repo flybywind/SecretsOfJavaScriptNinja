@@ -1,0 +1,70 @@
+<!doctype html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<style>
+	div {
+		position: relative;
+	}
+	p {
+		position: absolute;
+		width: 200px;
+		height: 200px;
+		
+		left: 1000px;
+		top: 0;
+
+		background: red;
+
+		transition: left .2s ease-in;
+	}
+	#list {
+		margin-top: 240px;
+	}
+</style>
+	<p id="slide">摩擦摩擦</p>
+	<ul id="list">
+		<li>timeout start:<span id=timeout></span></li>
+	</ul>
+
+<script>
+	var p = document.getElementById("slide");
+	var timeout = document.getElementById("timeout");
+	var ul = document.getElementById("list");
+	Date.now = Date.prototype.now ? 
+		Date.prototype.now : function() {
+			return (new Date()).getTime();
+		};
+	var start = Date.now();
+	var cnt = 0;
+	p.style.left = 0;
+	
+	var longtext = "  When using the getElementById function, you need to remember a few things to ensure that everything goes smoothly. You always need to remember that getElementById is a method (or function) of the document object. This means you can only access it by using document.getElementById.  Also, be sure that you set your HTML elements' id attributes if you want to be able to use this function. Without an id, you'll be dead in the water.  If you want to access the text within a non-input HTML element, then you are going to have to use the innerHTML property instead of value. The next lesson goes into more detail about the uses of innerHTML. This means you can only access it by using document.getElementById.  Also, be sure that you set your HTML elements' id attributes if you want to be able to use this function. Without an id, you'll be dead in the water.  If you want to access the text within a non-input HTML element, then you are going to have to use the innerHTML property instead of value. The next lesson goes into more detail about the uses of innerHTML. This means you can only access it by using document.getElementById.  Also, be sure that you set your HTML elements' id attributes if you want to be able to use this function. Without an id, you'll be dead in the water.  If you want to access the text within a non-input HTML element, then you are going to have to use the innerHTML property instead of value. The next lesson goes into more detail about the uses of innerHTML. This means you can only access it by using document.getElementById.  Also, be sure that you set your HTML elements' id attributes if you want to be able to use this function. Without an id, you'll be dead in the water.  If you want to access the text within a non-input HTML element, then you are going to have to use the innerHTML property instead of value. The next lesson goes into more detail about the uses of innerHTML. This means you can only access it by using document.getElementById.  Also, be sure that you set your HTML elements' id attributes if you want to be able to use this function. Without an id, you'll be dead in the water.  If you want to access the text within a non-input HTML element, then you are going to have to use the innerHTML property instead of value. The next lesson goes into more detail about the uses of innerHTML. This means you can only access it by using document.getElementById.  Also, be sure that you set your HTML elements' id attributes if you want to be able to use this function. Without an id, you'll be dead in the water.  If you want to access the text within a non-input HTML element, then you are going to have to use the innerHTML property instead of value. The next lesson goes into more detail about the uses of innerHTML. This means you can only access it by using document.getElementById.  Also, be sure that you set your HTML elements' id attributes if you want to be able to use this function. Without an id, you'll be dead in the water.  If you want to access the text within a non-input HTML element, then you are going to have to use the innerHTML property instead of value. The next lesson goes into more detail about the uses of innerHTML. This means you can only access it by using document.getElementById.  Also, be sure that you set your HTML elements' id attributes if you want to be able to use this function. Without an id, you'll be dead in the water.  If you want to access the text within a non-input HTML element, then you are going to have to use the innerHTML property instead of value. The next lesson goes into more detail about the uses of innerHTML. This means you can only access it by using document.getElementById.  Also, be sure that you set your HTML elements' id attributes if you want to be able to use this function. Without an id, you'll be dead in the water.  If you want to access the text within a non-input HTML element, then you are going to have to use the innerHTML property instead of value. The next lesson goes into more detail about the uses of innerHTML.  ";
+	var pat = /(abc)|(xyz)|(opq)a[1-8]+z/;
+	function foo(cnt) {
+		while (cnt --) {
+			pat.test(longtext);
+		}
+	}
+	foo(1000);
+	setTimeout(function() {
+		var t = Date.now();
+		timeout.innerHTML = (t - start) + "ms";
+		p.style.left = "1000px";
+		foo(4000);
+	}, 1000);
+
+	var iid = setInterval(function() {
+		++cnt;
+		if (cnt <= 20) {
+			var t = Date.now();
+			var li = document.createElement("li");
+			li.innerHTML = "interval `" + cnt + "` start at:" + (t - start) + "ms";
+			ul.appendChild(li);
+			if (cnt % 2) p.style.left = (20/cnt - 1) * 50 + "px";
+			else p.style.left = 0;
+		}
+		else clearInterval(iid);
+	}, 500);
+
+</script>
