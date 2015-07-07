@@ -22,3 +22,5 @@
 ## 8 Taming threads and timers (驯服线程和计时器)
 
 1. [计时器和线程如何工作](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Taming%20threads%20and%20timers/8.1.md)
+2. [可靠的最小延时](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Taming%20threads%20and%20timers/8.2.md)
+3. [处理计算密集性任务](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Taming%20threads%20and%20timers/8.3.md)
