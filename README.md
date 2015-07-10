@@ -1,6 +1,7 @@
 # Javascript忍者秘术精要
 翻译自Secrets of Javascript Ninja，摘要其中最精妙的部分进行翻译
 
+# Part 2
 ## 6 Object-orientation with prototypes (用原型实现面向对象)
 
 1. [初始化和原型 Instantiation and prototypes](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Object-orientation%20with%20prototypes/6.1.md)
@@ -26,3 +27,9 @@
 3. [处理计算密集性任务](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Taming%20threads%20and%20timers/8.3.md)
 4.  [中央计时控制器](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Taming%20threads%20and%20timers/8.4.md)
 5. [异步测试](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Taming%20threads%20and%20timers/8.5.md)
+
+# Part 3
+
+## 9 Ninja alchemy: runtime code evaluation (忍者点金术：动态代码执行)
+
+1. [执行机制](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Ninja alchemy%2f%20runtime%20code%20evaluation/9.1.md)
