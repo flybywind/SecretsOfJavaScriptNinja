@@ -12,7 +12,7 @@
 ## 7 Wrangling regular expressions (修炼正则表达式)
 
 1. [为什么使用正则](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Wrangling%20regular%20expressions/7.1.md)
-2. [正则用法](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Wrangling%20regular%20expressions/7.2.md) 
+2. [正则用法](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Wrangling%20regular%20expressions/7.2.md)
 3. [编译正则表达式](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Wrangling%20regular%20expressions/7.3.md)
 4. [正则捕获](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Wrangling%20regular%20expressions/7.4.md)
 5. [函数替换](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Wrangling%20regular%20expressions/7.5.md)
@@ -24,3 +24,5 @@
 1. [计时器和线程如何工作](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Taming%20threads%20and%20timers/8.1.md)
 2. [可靠的最小延时](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Taming%20threads%20and%20timers/8.2.md)
 3. [处理计算密集性任务](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Taming%20threads%20and%20timers/8.3.md)
+4.  [中央计时控制器](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Taming%20threads%20and%20timers/8.4.md)
+5. [异步测试](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Taming%20threads%20and%20timers/8.5.md)
