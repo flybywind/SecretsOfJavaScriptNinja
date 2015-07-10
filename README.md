@@ -32,4 +32,4 @@
 
 ## 9 Ninja alchemy: runtime code evaluation (忍者点金术：动态代码执行)
 
-1. [执行机制](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Ninja alchemy%2f%20runtime%20code%20evaluation/9.1.md)
+1. [执行机制](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Ninja%20alchemy:%20runtime%20code%20evaluation/9.1.md)
