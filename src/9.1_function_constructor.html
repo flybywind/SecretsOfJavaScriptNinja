@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>function constructor</title>
+    <link rel="stylesheet" href="qunit/qunit-1.18.0.css">
+</head>
+
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="qunit/qunit-1.18.0.js"></script>
+    <script type="text/javascript">
+        QUnit.test("function constructor", function(assert)
+        {
+            var c = 100;
+            (function()
+            {
+                var c = 100;
+                var add1 = new Function("a", "b",
+                    "return a + b + c ");
+                var add2 = new Function("a", "b", "return a + b ");
+                assert.deepEqual(add1(1, 2), 103);
+                assert.deepEqual(add2(1, 2), 3);
+            }());
+
+            var add1 = function(a, b)
+            {
+                return a + b + c
+            }
+            var add2 = function(a, b)
+            {
+                return a + b
+            }
+            assert.deepEqual(add1(1, 2), 103);
+            assert.deepEqual(add2(1, 2), 3);
+        });
+    </script>
+</body>
+
+</html>
