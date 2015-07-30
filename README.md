@@ -34,4 +34,4 @@
 
 1. [执行机制](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Ninja%20alchemy:%20runtime%20code%20evaluation/9.1.md)
 2. [函数反编译](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Ninja%20alchemy:%20runtime%20code%20evaluation/9.2.md)
-3.[代码解析的实际应用](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Ninja%20alchemy:%20runtime%20code%20evaluation/9.3.md)
+3. [代码解析的实际应用](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Ninja%20alchemy:%20runtime%20code%20evaluation/9.3.md)
