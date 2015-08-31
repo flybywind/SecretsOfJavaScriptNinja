@@ -2,6 +2,11 @@
 翻译自Secrets of Javascript Ninja，摘要其中最精妙的部分进行翻译
 
 # Part 2
+
+## 3 Functions are fundamental
+
+1. [函数式的区别在哪 What’s with the functional difference?](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Functions%20are%20fundamental/3.1.md) 
+
 ## 6 Object-orientation with prototypes (用原型实现面向对象)
 
 1. [初始化和原型 Instantiation and prototypes](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Object-orientation%20with%20prototypes/6.1.md)
