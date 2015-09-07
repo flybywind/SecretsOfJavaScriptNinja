@@ -5,7 +5,8 @@
 
 ## 3 Functions are fundamental
 
-1. [函数式的区别在哪 What’s with the functional difference?](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Functions%20are%20fundamental/3.1.md) 
+1. [函数式的区别在哪 What’s with the functional difference?](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Functions%20are%20fundamental/3.1.md)
+2. [函数声明 Declarations](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Functions%20are%20fundamental/3.2.md) 
 
 ## 6 Object-orientation with prototypes (用原型实现面向对象)
 
