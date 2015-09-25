@@ -9,6 +9,10 @@
 2. [函数声明 Declarations](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Functions%20are%20fundamental/3.2.md)
 3. [函数调用 Invocations](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Functions%20are%20fundamental/3.3.md)
 
+## 4 Wielding functions (挥舞函数)
+
+1. [匿名函数 Anonymous functions](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Wielding%20functions/4.1.md)
+
 ## 6 Object-orientation with prototypes (用原型实现面向对象)
 
 1. [初始化和原型 Instantiation and prototypes](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Object-orientation%20with%20prototypes/6.1.md)
