@@ -17,9 +17,9 @@
 
 2. [递归 Recursion](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Wielding%20functions/4.2.md)
 
-3. [把函数当对象玩 ](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Functions%20are%20fundamental/4.3.md)
+3. [把函数当对象玩 ](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Wielding%20functions/4.3.md)
 
-4. [变长参数列表 ](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Functions%20are%20fundamental/4.4.md)
+4. [变长参数列表 ](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Wielding%20functions/4.4.md)
 
 ## 6 Object-orientation with prototypes (用原型实现面向对象)
 
