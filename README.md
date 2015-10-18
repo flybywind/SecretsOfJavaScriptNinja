@@ -21,6 +21,8 @@
 
 4. [变长参数列表 ](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Wielding%20functions/4.4.md)
 
+5. [检查函数 ](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Wielding%20functions/4.5.md)
+
 ## 6 Object-orientation with prototypes (用原型实现面向对象)
 
 1. [初始化和原型 Instantiation and prototypes](https://github.com/flybywind/SecretsOfJavaScriptNinja/blob/master/Object-orientation%20with%20prototypes/6.1.md)
